@@ -11,7 +11,10 @@ import SwiftUI
 struct Grabit_ProtocolBaseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BoardView()
+                .frame(minWidth: 350, minHeight: 250)
         }
+        .defaultSize(CGSize(width: 350, height: 350))
+        .windowResizability(.contentMinSize)
     }
 }
