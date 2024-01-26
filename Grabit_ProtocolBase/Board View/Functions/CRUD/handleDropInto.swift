@@ -10,6 +10,11 @@ import UniformTypeIdentifiers
 
 extension BoardView {
     func handleDropInto(providers: [NSItemProvider]) -> Bool {
+        guard draggingItemID == nil else {
+            // This is an internal drag, so don't add a new item
+            return false
+        }
+        
         var didHandle = false
         
         for provider in providers {

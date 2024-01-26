@@ -35,9 +35,9 @@
 		79530B222B631E3900C87FAE /* handlePlainText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79530B212B631E3900C87FAE /* handlePlainText.swift */; };
 		79530B242B631E4C00C87FAE /* handleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79530B232B631E4C00C87FAE /* handleImage.swift */; };
 		79530B262B631E8C00C87FAE /* handleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79530B252B631E8C00C87FAE /* handleURL.swift */; };
-		79530B282B632EAC00C87FAE /* undoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79530B272B632EAC00C87FAE /* undoButton.swift */; };
 		79530B2A2B633BF300C87FAE /* CustomPDFPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79530B292B633BF300C87FAE /* CustomPDFPreviewView.swift */; };
 		79530B2C2B633CE700C87FAE /* handlePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79530B2B2B633CE700C87FAE /* handlePDF.swift */; };
+		79EF03932B6456AF009711A9 /* undoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF03922B6456AE009711A9 /* undoButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,9 +69,9 @@
 		79530B212B631E3900C87FAE /* handlePlainText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handlePlainText.swift; sourceTree = "<group>"; };
 		79530B232B631E4C00C87FAE /* handleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handleImage.swift; sourceTree = "<group>"; };
 		79530B252B631E8C00C87FAE /* handleURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handleURL.swift; sourceTree = "<group>"; };
-		79530B272B632EAC00C87FAE /* undoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = undoButton.swift; sourceTree = "<group>"; };
 		79530B292B633BF300C87FAE /* CustomPDFPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPDFPreviewView.swift; sourceTree = "<group>"; };
 		79530B2B2B633CE700C87FAE /* handlePDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handlePDF.swift; sourceTree = "<group>"; };
+		79EF03922B6456AE009711A9 /* undoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = undoButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +195,7 @@
 				79530B182B631D5300C87FAE /* masonryItem.swift */,
 				79530B1A2B631D7600C87FAE /* masonryView.swift */,
 				79530B1C2B631D9A00C87FAE /* materialBackground.swift */,
-				79530B272B632EAC00C87FAE /* undoButton.swift */,
+				79EF03922B6456AE009711A9 /* undoButton.swift */,
 			);
 			path = "Sub-Views";
 			sourceTree = "<group>";
@@ -300,7 +300,6 @@
 			files = (
 				79530AF32B6301C300C87FAE /* CustomURLPreviewView.swift in Sources */,
 				79530B2A2B633BF300C87FAE /* CustomPDFPreviewView.swift in Sources */,
-				79530B282B632EAC00C87FAE /* undoButton.swift in Sources */,
 				79530B0B2B631BE100C87FAE /* copy.swift in Sources */,
 				79530B1D2B631D9A00C87FAE /* materialBackground.swift in Sources */,
 				79530B222B631E3900C87FAE /* handlePlainText.swift in Sources */,
@@ -324,6 +323,7 @@
 				79530ADD2B62FDED00C87FAE /* Protocol.swift in Sources */,
 				79530B192B631D5300C87FAE /* masonryItem.swift in Sources */,
 				79530B022B631B1600C87FAE /* handleDropInto.swift in Sources */,
+				79EF03932B6456AF009711A9 /* undoButton.swift in Sources */,
 				79530B092B631BA300C87FAE /* removeBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

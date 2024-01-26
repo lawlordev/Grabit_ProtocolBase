@@ -12,11 +12,37 @@ extension BoardView {
         item.view(contentView: self)
             .frame(width: minimumItemDimensions)
             .background(materialBackground(isSelected: selectedItemIndex == index))
+            .overlay(
+                selectionInProgress ? selectionIndicator(isSelected: selectedItems.contains(index)) : nil
+            )
             .onTapGesture {
-                toggleSelection(for: index)
+                if selectionInProgress {
+                    if selectedItems.contains(index) {
+                        selectedItems.remove(index)
+                    } else {
+                        selectedItems.insert(index)
+                    }
+                } else {
+                    toggleSelection(for: index)
+                }
             }
             .onDrag {
-                handleDragAway(for: item, at: index)
+                self.draggingItemID = item.id
+                return handleDragAway(for: item, at: index)
             }
+    }
+    
+    private func selectionIndicator(isSelected: Bool) -> some View {
+        ZStack {
+            Circle()
+                .strokeBorder(Color.black, lineWidth: 2)
+                .background(Circle().fill(isSelected ? Color.black : Color.clear))
+            if isSelected {
+                Image(systemName: "checkmark")
+                    .foregroundColor(.white)
+            }
+        }
+        .frame(width: 30, height: 30)
+        .padding()
     }
 }

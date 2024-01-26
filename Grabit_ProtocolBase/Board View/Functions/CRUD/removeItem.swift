@@ -8,11 +8,13 @@
 import Foundation
 
 extension BoardView {
-    func removeItem(at index: Int) {
-        guard index >= 0 && index < droppedItems.count else {
-            // Optionally, log an error message or handle the invalid index appropriately
-            return
+    func removeItem(with id: UUID) {
+        // Find the index of the item with the given id
+        if let index = droppedItems.firstIndex(where: { $0.id == id }) {
+            droppedItems.remove(at: index)
+
+            // Update selectedItems indices since droppedItems has changed
+            selectedItems = Set(selectedItems.map { $0 > index ? $0 - 1 : $0 }.filter { $0 != index })
         }
-        droppedItems.remove(at: index)
     }
 }

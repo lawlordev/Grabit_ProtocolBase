@@ -14,12 +14,14 @@ extension BoardView {
         let numberOfColumns = max(2, Int(width / (minimumItemDimensions + 10)))
         
         return VMasonry(columns: numberOfColumns) {
-            ForEach(Array(droppedItems.enumerated()), id: \.offset) { index, item in
-                masonryItem(for: item, at: index)
+            ForEach(droppedItems, id: \.id) { item in
+                if let index = droppedItems.firstIndex(where: { $0.id == item.id }) {
+                    masonryItem(for: item, at: index)
+                }
             }
         }
         .padding()
-        .animation(.easeInOut, value: numberOfColumns)
+        .animation(.easeInOut, value: droppedItems.map { $0.id })
         .ornament(attachmentAnchor: .scene(.bottom), ornament: {
             itemActionsView
         })

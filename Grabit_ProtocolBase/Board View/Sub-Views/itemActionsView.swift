@@ -39,6 +39,11 @@ extension BoardView {
                         Image(systemName: "doc.on.doc")
                     }
                 }
+                
+                Button(action: { removeItem(with: item.id)} ) {
+                    Image(systemName: "trash")
+                        .foregroundStyle(Color.red)
+                }
             }
             .font(.title)
             .padding()

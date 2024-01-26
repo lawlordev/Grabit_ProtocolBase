@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-protocol DroppableItem: Equatable {
+protocol DroppableItem {
+    var id: UUID { get }
     func view(contentView: BoardView) -> AnyView
 }
 
 struct TextItem: DroppableItem {
+    let id = UUID()
     let text: String
 
     func view(contentView: BoardView) -> AnyView {
@@ -20,6 +22,7 @@ struct TextItem: DroppableItem {
 }
 
 struct URLItem: DroppableItem {
+    let id = UUID()
     let url: URL
 
     func view(contentView: BoardView) -> AnyView {
@@ -28,6 +31,7 @@ struct URLItem: DroppableItem {
 }
 
 struct ImageItem: DroppableItem {
+    let id = UUID()
     let image: UIImage
 
     func view(contentView: BoardView) -> AnyView {
@@ -36,6 +40,7 @@ struct ImageItem: DroppableItem {
 }
 
 struct PDFItem: DroppableItem {
+    let id = UUID()
     let url: URL
     let title: String
     let thumbnail: UIImage
